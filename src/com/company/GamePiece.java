@@ -46,16 +46,28 @@ public class GamePiece {
         this.color = color;
     }
 
+    public void freeze() {
+        //if the game piece is not frozen
+        // then call the freeze sets to the frozen variable true
 
-//     freeze(takes no params)
-//         call setFrozen(true)
-//
-//     unfreeze()
-//         call setFrozen(false)
-//
-//     move(takes two numbers) don't move if frozen
-//         if frozen = false
-//             x = firstNumber
-//             y = secondNumber
+        if (this.frozen == false){
+            this.frozen = true;
+        }
+        System.out.println(this.frozen);
+    }
+    public void unfreeze(){
+        if (this.frozen == true){
+            this.frozen = false;
+        }
+        System.out.println(this.frozen);
+    }
+
+    public void move(int x ,int y){
+        System.out.println("moving to the");
+      if (this.frozen == false){
+          this.positionY = y;
+          this.positionX = x;
+      }
+    }
 
 }
